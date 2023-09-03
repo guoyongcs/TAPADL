@@ -18,12 +18,12 @@ We use many robustness benchmarks for evaluation, including [ImageNet-A](https:/
 ## Image Classification
 
 
-#### Pretrained Model
+### Pretrained Model
 
 Please download and put the pretrained model [tapadl_rvt_base.pth.tar](tapadl_rvt_base.pth.tar) in ```../pretrained```.
 
 
-#### Evaluation
+### Evaluation
 - Evaluate the pretrained model on ImageNet:
 ```
 CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 --master_port=12345 main.py --eval --model tap_rvt_base_plus --data-path /PATH/TO/IMAGENET --output_dir ./experiments/test_exp_tapadl_rvt_base_imagenet --dist-eval --pretrain_path ../pretrained/tapadl_rvt_base.pth.tar
@@ -46,7 +46,7 @@ Please refer to [test.sh](https://github.com/hendrycks/robustness/blob/master/Im
 
 
 
-#### Training 
+### Training 
 Train FAN-B-Hybrid with TAP and ADL on ImageNet (using 8 nodes and each with 8 GPUs)
 ```
 python -m torch.distributed.launch --nproc_per_node=4 --nnodes=8 --node_rank=$NODE_RANK --master_addr=$MASTER_ADDR --master_port=$MASTER_PORT  main.py --model tap_rvt_base_plus --data-path /PATH/TO/IMAGENET --output_dir ./experiments/exp_tapadl_rvt_base_imagenet --dist-eval --use_patch_aug --batch-size 64 --aa rand-m9-mstd0.5-inc1

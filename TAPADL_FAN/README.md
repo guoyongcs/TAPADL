@@ -38,12 +38,12 @@ We also use other robustness benchmarks for evaluation, including [ImageNet-A](h
 ## Image Classification
 
 
-#### Pretrained Model
+### Pretrained Model
 
 Please download and put the pretrained model [tapadl_fan_base.pth.tar](tapadl_fan_base.pth.tar) in ```../pretrained```.
 
 
-#### Evaluation
+### Evaluation
 - Evaluate the pretrained model on ImageNet:
 ```
 CUDA_VISIBLE_DEVICES=0 python validate_ood.py /PATH/TO/IMAGENET --model tap_fan_base_16_p4_hybrid \
@@ -70,7 +70,7 @@ Please refer to [test.sh](https://github.com/hendrycks/robustness/blob/master/Im
 
 
 
-#### Training 
+### Training 
 Train FAN-B-Hybrid with TAP and ADL on ImageNet (using 8 nodes and each with 8 GPUs)
 ```
 python -m torch.distributed.launch --nproc_per_node=8 --nnodes=8 --node_rank=$NODE_RANK \ 
