@@ -30,17 +30,26 @@ Please download and put the pretrained model [tapadl_rvt_base.pth.tar](https://g
 ### Evaluation
 - Evaluate the pretrained model on ImageNet:
 ```
-CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 --master_port=12345 main.py --eval --model tap_rvt_base_plus --data-path /PATH/TO/IMAGENET --output_dir ./experiments/test_exp_tapadl_rvt_base_imagenet --dist-eval --pretrain_path ../pretrained/tapadl_rvt_base.pth.tar
+CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 --master_port=12345 main.py \
+  --eval --model tap_rvt_base_plus --data-path /PATH/TO/IMAGENET \
+  --output_dir ./experiments/test_exp_tapadl_rvt_base_imagenet --dist-eval \
+  --pretrain_path ../pretrained/tapadl_rvt_base.pth.tar
 ```
 
 - Evaluate the pretrained model on ImageNet-A/R:
 ```
-CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 --master_port=12345 main.py --eval --model tap_rvt_base_plus --data-path /PATH/TO/IMAGENET --output_dir ./experiments/test_exp_tapadl_rvt_base_imagenet_a --dist-eval --pretrain_path ../pretrained/tapadl_rvt_base.pth.tar --ina_path /PATH/TO/IMAGENET-A
+CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 --master_port=12345 main.py \
+  --eval --model tap_rvt_base_plus --data-path /PATH/TO/IMAGENET \
+  --output_dir ./experiments/test_exp_tapadl_rvt_base_imagenet_a --dist-eval \
+  --pretrain_path ../pretrained/tapadl_rvt_base.pth.tar --ina_path /PATH/TO/IMAGENET-A
 ```
 
 - Evaluate the pretrained model on ImageNet-C:
 ```
-CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 --master_port=12345 main.py --eval --model tap_rvt_base_plus --data-path /PATH/TO/IMAGENET --output_dir ./experiments/test_exp_tapadl_rvt_base_imagenet_c --dist-eval --pretrain_path ../pretrained/tapadl_rvt_base.pth.tar --inc_path /PATH/TO/IMAGENET-C
+CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 --master_port=12345 main.py \
+  --eval --model tap_rvt_base_plus --data-path /PATH/TO/IMAGENET \
+  --output_dir ./experiments/test_exp_tapadl_rvt_base_imagenet_c --dist-eval \
+  --pretrain_path ../pretrained/tapadl_rvt_base.pth.tar --inc_path /PATH/TO/IMAGENET-C
 ```
 
 - Evaluate the pretrained model on ImageNet-P
@@ -51,9 +60,11 @@ CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 --m
 
 
 ### Training 
-Train FAN-B-Hybrid with TAP and ADL on ImageNet (using 8 nodes and each with 8 GPUs)
+Train FAN-B-Hybrid with TAP and ADL on ImageNet (using 8 nodes and each with 4 GPUs)
 ```
-python -m torch.distributed.launch --nproc_per_node=4 --nnodes=8 --node_rank=$NODE_RANK --master_addr=$MASTER_ADDR --master_port=$MASTER_PORT  main.py --model tap_rvt_base_plus --data-path /PATH/TO/IMAGENET --output_dir ./experiments/exp_tapadl_rvt_base_imagenet --dist-eval --use_patch_aug --batch-size 64 --aa rand-m9-mstd0.5-inc1
+python -m torch.distributed.launch --nproc_per_node=4 --nnodes=8 --node_rank=$NODE_RANK --master_addr=$MASTER_ADDR --master_port=$MASTER_PORT  main.py \
+  --model tap_rvt_base_plus --data-path /PATH/TO/IMAGENET --output_dir ./experiments/exp_tapadl_rvt_base_imagenet --dist-eval --use_patch_aug \
+  --batch-size 64 --aa rand-m9-mstd0.5-inc1
 ```
 
 

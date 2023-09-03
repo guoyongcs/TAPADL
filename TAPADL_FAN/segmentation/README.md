@@ -48,7 +48,10 @@ Please put the pretrained model [tapadl_fan_base_segmentation.pth](https://githu
 
 2. Evaluate the model via
 ```
-CUDA_VISIBLE_DEVICES=0 python test_cityscapes.py local_configs/fan/fan_hybrid/tapfan_hybrid_base.1024x1024.city.160k.test.py ../../pretrained/tapadl_fan_base_segmentation.pth --eval mIoU --results-file output/
+CUDA_VISIBLE_DEVICES=0 python test_cityscapes.py \
+    local_configs/fan/fan_hybrid/tapfan_hybrid_base.1024x1024.city.160k.test.py \
+    ../../pretrained/tapadl_fan_base_segmentation.pth \
+    --eval mIoU --results-file output/
 ```
 
 
@@ -60,7 +63,10 @@ CUDA_VISIBLE_DEVICES=0 python test_cityscapes.py local_configs/fan/fan_hybrid/ta
 
 2. Evaluate the model via
 ```
-CUDA_VISIBLE_DEVICES=0 python test_cityscapes_c.py local_configs/fan/fan_hybrid/tapfan_hybrid_base.1024x1024.city.160k.test.py ../../pretrained/tapadl_fan_base_segmentation.pth --eval mIoU --results-file output/
+CUDA_VISIBLE_DEVICES=0 python test_cityscapes_c.py \
+    local_configs/fan/fan_hybrid/tapfan_hybrid_base.1024x1024.city.160k.test.py \
+    ../../pretrained/tapadl_fan_base_segmentation.pth \
+    --eval mIoU --results-file output/
 ```
 
 
@@ -71,7 +77,10 @@ CUDA_VISIBLE_DEVICES=0 python test_cityscapes_c.py local_configs/fan/fan_hybrid/
 
 2. Evaluate the model via
 ```
-CUDA_VISIBLE_DEVICES=0 python test_cityscapes_c.py local_configs/fan/fan_hybrid/tapfan_hybrid_base.1024x1024.city.160k.test.py ../../pretrained/tapadl_fan_base_segmentation.pth --results-file output/ --show-dir output/
+CUDA_VISIBLE_DEVICES=0 python test_cityscapes_c.py \
+    local_configs/fan/fan_hybrid/tapfan_hybrid_base.1024x1024.city.160k.test.py \
+    ../../pretrained/tapadl_fan_base_segmentation.pth \
+    --results-file output/ --show-dir output/
 ```
 
 3. Submit the results to obtain the mIoU score on [acdc.vision.ee.ethz.ch](https://acdc.vision.ee.ethz.ch)
@@ -83,6 +92,8 @@ CUDA_VISIBLE_DEVICES=0 python test_cityscapes_c.py local_configs/fan/fan_hybrid/
 Train FAN-B-Hybrid with TAP and ADL on Cityscapes (using 4 GPUs)
 
 ```
-python -m torch.distributed.launch --nproc_per_node=4 --master_port=12345 train.py local_configs/fan/fan_hybrid/tapadl_fan_hybrid_base.1024x1024.city.160k.py --launcher pytorch --work-dir ./exp_tapadl_fan_base_segmentation_cityscapes --auto-resume
+python -m torch.distributed.launch --nproc_per_node=4 --master_port=12345 train.py \
+    local_configs/fan/fan_hybrid/tapadl_fan_hybrid_base.1024x1024.city.160k.py \
+    --launcher pytorch --work-dir ./exp_tapadl_fan_base_segmentation_cityscapes
 ```
 
