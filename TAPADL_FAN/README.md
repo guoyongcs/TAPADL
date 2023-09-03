@@ -91,7 +91,7 @@ python -m torch.distributed.launch --nproc_per_node=8 --nnodes=8 --node_rank=$NO
 
 ## Semantic Segmentation
 
-Please see details in [README.md](https://github.com/guoyongcs/TAPADL/blob/main/TAPADL_FAN/segmentation).
+Please see details in [segmentation](https://github.com/guoyongcs/TAPADL/blob/main/TAPADL_FAN/segmentation).
 
 
 ## Citation
