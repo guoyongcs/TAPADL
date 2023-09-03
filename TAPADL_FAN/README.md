@@ -1,4 +1,4 @@
-# Training and Evaluation of TAPADL based on FAN for image classification and semantic segmentation
+# Training and evaluation of TAPADL based on FAN for image classification and semantic segmentation
 [Robustifying Token Attention for Vision Transformers](https://arxiv.org/pdf/2303.11126.pdf), \
 [Yong Guo](http://www.guoyongcs.com/), [David Stutz](https://davidstutz.de/), and [Bernt Schiele](https://scholar.google.com/citations?user=z76PBfYAAAAJ&hl=en). ICCV 2023.
 
