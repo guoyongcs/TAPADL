@@ -65,7 +65,7 @@ CUDA_VISIBLE_DEVICES=0 python validate_ood.py /PATH/TO/IMAGENET --model tap_fan_
 
 - Evaluate the pretrained model on ImageNet-P
 
-Please refer to [test.sh](https://github.com/hendrycks/robustness/blob/master/ImageNet-P/test.sh) to see how to evaluate models on ImageNet-P.
+    Please refer to [test.sh](https://github.com/hendrycks/robustness/blob/master/ImageNet-P/test.sh) to see how to evaluate models on ImageNet-P.
 
 
 
