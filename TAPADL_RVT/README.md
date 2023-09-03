@@ -20,7 +20,11 @@ We use many robustness benchmarks for evaluation, including [ImageNet-A](https:/
 
 ### Pretrained Model
 
-Please download and put the pretrained model [tapadl_rvt_base.pth.tar](tapadl_rvt_base.pth.tar) in ```../pretrained```.
+|       Model       | #Params | IN-1K $\uparrow$ | IN-C $\downarrow$ | IN-A $\uparrow$ | IN-P $\downarrow$ |
+|:-----------------:|:----------------:|:-----------------:|:---------------:|:-----------------:|:-------:|
+|  [RVT-B (TAP & ADL)](https://github.com/guoyongcs/TAPADL/releases/download/v1.0/tapadl_rvt_base.pth.tar)   |  92.1M  |     **83.1**     |     **44.7**      |    **32.7**     |     **29.6**      |
+
+Please download and put the pretrained model [tapadl_rvt_base.pth.tar](https://github.com/guoyongcs/TAPADL/releases/download/v1.0/tapadl_rvt_base.pth.tar) in ```../pretrained```.
 
 
 ### Evaluation

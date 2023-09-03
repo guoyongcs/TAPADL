@@ -32,7 +32,11 @@ Please see more details of generating Cityscapes-C in the [guidelines](https://g
 
 ## Pretrained Model
 
-Please put the pretrained model [tapadl_fan_base_segmentation.pth](tapadl_fan_base_segmentation.pth) in ```../../pretrained```.
+|       Model       | Cityscapes | Cityscapes-C | ACDC |
+|:-----------------:|:----------------:|:-----------------:|:---------------:|
+|  [FAN-B-ViT (TAP & ADL)](https://github.com/guoyongcs/TAPADL/releases/download/v1.0/tapadl_fan_base_segmentation.pth)   |     **82.9**     |     **69.7**      |    **63.6**     |
+
+Please put the pretrained model [tapadl_fan_base_segmentation.pth](https://github.com/guoyongcs/TAPADL/releases/download/v1.0/tapadl_fan_base_segmentation.pth) in ```../../pretrained```.
 
 
 ## Evaluation

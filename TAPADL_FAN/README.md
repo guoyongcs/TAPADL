@@ -38,9 +38,14 @@ We also use other robustness benchmarks for evaluation, including [ImageNet-A](h
 ## Image Classification
 
 
+
 ### Pretrained Model
 
-Please download and put the pretrained model [tapadl_fan_base.pth.tar](tapadl_fan_base.pth.tar) in ```../pretrained```.
+|       Model       | #Params | IN-1K $\uparrow$ | IN-C $\downarrow$ | IN-A $\uparrow$ | IN-P $\downarrow$ |
+|:-----------------:|:----------------:|:-----------------:|:---------------:|:-----------------:|:-------:|
+|  [FAN-B-ViT (TAP & ADL)](https://github.com/guoyongcs/TAPADL/releases/download/v1.0/tapadl_fan_base.pth.tar)   |  50.7M  |     **84.3**     |     **43.7**      |    **42.3**     |     **29.2**      |
+
+Please download and put the pretrained model [tapadl_fan_base.pth.tar](https://github.com/guoyongcs/TAPADL/releases/download/v1.0/tapadl_fan_base.pth.tar) in ```../pretrained```.
 
 
 ### Evaluation

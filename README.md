@@ -40,6 +40,9 @@ Please download the clean [Cityscapes](https://www.cityscapes-dataset.com/) data
     Please see how to train/evaluate FAN and RVT models in [TAPADL_FAN](TAPADL_FAN) and [TAPADL_RVT](TAPADL_RVT), respectively.
 
 
+
+
+
 - Semantic Segmentation: 
   
     Please see how to train/evaluate our segmentation model in [TAPADL_FAN/segmentation](TAPADL_FAN/segmentation).
