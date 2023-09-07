@@ -661,11 +661,6 @@ class TAPFANBlock(nn.Module):
         H, W = self.H, self.W
 
         B, N, C = x.shape
-        if remove_head is not None:
-            x = x.reshape(B, N, self.attn.num_heads, C // self.attn.num_heads)
-            x[:,:,remove_head,:] = x[:,:,remove_head,:] * 0
-            x = x.reshape(B, N, C)
-
         x_attn = x.reshape(B, int(N**0.5), int(N**0.5), C).permute(0,3,1,2)
         mask = self.dilation_predictor(x_attn) # B 1 H W K
         self.pred_scale = mask
