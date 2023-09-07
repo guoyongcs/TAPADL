@@ -875,8 +875,7 @@ def validate(model, loader, loss_fn, args, amp_autocast=suppress, log_suffix='')
                 input = input.contiguous(memory_format=torch.channels_last)
 
             with amp_autocast():
-                output = model(input, remove_head=[2,5])
-                # output = model(input)
+                output = model(input)
             if isinstance(output, (tuple, list)):
                 output = output[0]
                 if args.cls_weight==0:
