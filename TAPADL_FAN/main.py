@@ -233,7 +233,7 @@ parser.add_argument('--model-ema', action='store_true', default=False,
 parser.add_argument('--model-ema-force-cpu', action='store_true', default=False,
                     help='Force ema to be tracked on CPU, rank=0 node only. Disables EMA validation.')
 parser.add_argument('--model-ema-decay', type=float, default=0.99996,
-                    help='decay factor for model weights moving average (default: 0.99992)')
+                    help='decay factor for model weights moving average (default: 0.99996)')
 parser.add_argument('--eval_model_ema', action='store_true', help='eval_model_ema')
 parser.add_argument('--not_load_ema', action='store_true')
 
