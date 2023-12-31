@@ -13,8 +13,8 @@ This repository contains the official Pytorch implementation and the pretrained 
 
 
 ## Catalog
-- [x] Pre-trained odels for image classification
-- [x] Pre-trained odels for semantic segmentation
+- [x] Pre-trained models for image classification
+- [x] Pre-trained models for semantic segmentation
 - [x] Evaluation and Training Code
 
 
